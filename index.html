@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/i18next-1.11.2.min.js"></script>
+
+</head>
+<body>
+This is an example template, for the i18next.js framwork.
+See: <a href="http://i18next.com/">http://i18next.com/</a> and
+<a href="http://i18next.com/pages/doc_init.html">i18next - initialization</a>
+for more information.
+<p></p>
+<a href="http://localhost:63343/learn-i18next/index.html?setLng=zh-CN">zh-CN</a>
+<p></p>
+<a href="http://localhost:63343/learn-i18next/index.html?setLng=en-US">en-US</a>
+<p></p>
+<a href="http://localhost:63343/learn-i18next/index.html?setLng=de-DE">de-DE</a>
+
+
+<ul class="nav">
+    <li><a id="a1" href="#" data-i18n="nav.home"></a></li>
+    <li><a id="a2" href="#" data-i18n="nav.page1"></a></li>
+    <li><a id="a3" href="#" data-i18n="nav.page2"></a></li>
+</ul>
+
+<div class="outer" data-i18n="ns:key" data-i18n-target=".inner">
+    <input class="inner" type="text"/>
+</div>
+
+<script type="text/javascript">
+    i18n.init(/*{detectLngQS: 'lang' },*/ function(err, t) {
+//        // translate nav
+        $(".nav").i18n();
+
+//        $("#a1").text(t("nav.home"));
+//        $("#a2").text(t("nav.page1"));
+//        $("#a3").text(t("nav.page2"));
+    });
+</script>
+</body>
+</html>
